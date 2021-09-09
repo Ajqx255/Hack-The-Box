@@ -23,7 +23,7 @@ Step 2: Open Ports
     - We will try to connect to ssh with the user and administrator credentials we have gathered from the previous box         archetype.  
     -     ssh ARCHETYPE/sql-svc@10.10.10.28
     -     ssh administrator@10.10.10.28
-    -     As you can see in the screen shots below we have been denied access
+    - As you can see in the screen shots below we have been denied access
 
       ![image](https://user-images.githubusercontent.com/29686845/132754134-8397a004-482f-4dd5-a56f-ba76c495c538.png)
 
