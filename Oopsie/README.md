@@ -36,7 +36,7 @@ Step 2: Open Ports
       
       ![image](https://user-images.githubusercontent.com/29686845/132760926-860112b0-c9ad-4d96-972c-c29457782e18.png)
 
-  - next We will us burp suit to look furhter into the backend of the webpage. First I am going to show you how to set up     the proxy burp suite will need (If you have not already) in the next step. 
+  - Next we will us burp suit to look furhter into the backend of the webpage. First I am going to show you how to set up     the proxy burp suite will need (If you have not already) in the next step. 
 
 Step 3: Burp Suite
   - 
