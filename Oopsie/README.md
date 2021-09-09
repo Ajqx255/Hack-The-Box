@@ -20,4 +20,11 @@ Step 1: Nmap Scan
 Step 2: Open Ports
   - First we will look at port 22
     - This will lead nowhere, but for the sake of realism we will go through the steps. If you would like to jump ahead         feel free to do so. 
-    - We will try to connect to ssh with the infomration we have gathered from the previous box archetype.  
+    - We will try to connect to ssh with the user and administrator credentials we have gathered from the previous box         archetype.  
+    -     ssh ARCHETYPE/sql-svc@10.10.10.28
+    -     ssh administrator@10.10.10.28
+    -     As you can see in the screen shots below we have been denied access
+
+      ![image](https://user-images.githubusercontent.com/29686845/132754134-8397a004-482f-4dd5-a56f-ba76c495c538.png)
+
+      ![image](https://user-images.githubusercontent.com/29686845/132754201-8f167c3e-0167-4436-a468-010bd8470afd.png)
