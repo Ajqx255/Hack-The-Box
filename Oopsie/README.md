@@ -16,6 +16,8 @@ Step 1: Nmap Scan
       - If you would like to read more about http and apache check out the links below!
       - https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
       - https://httpd.apache.org/
-
-Step 2: Revieweing Ports
-  - 
+     
+Step 2: Open Ports
+  - First we will look at port 22
+    - This will lead nowhere, but for the sake of realism we will go through the steps. If you would like to jump ahead         feel free to do so. 
+    - We will try to connect to ssh with the infomration we have gathered from the previous box archetype.  
