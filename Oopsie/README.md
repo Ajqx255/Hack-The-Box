@@ -48,5 +48,8 @@ Step 3: Burp Suite
     - Take note of the Interface IP that is listed it should look like the one in the snapshot above. 
     - Now go to your foxy proxy icon on firefox and open it by clicking the icon, click options and configure foxy proxy       with the interface ip and port number that was in burpsuite.
       ![image](https://user-images.githubusercontent.com/29686845/132774125-3767037e-b934-49e8-aec3-17050de88ee4.png)
+    - Lastly click save.
+  - Now that we have everything configured. We are going to use Burp to intercept, change, and modify packets that are       going from the web page to the web server and see what we can access.
+    - 
 
 
