@@ -32,3 +32,11 @@ Step 2: Open Ports
   - Now lets take a look at Port 80
     - We will do this by opening a web browser and typing the IP Address of the machine into the url bar
     -     http://10.10.10.28
+    - At first glance there seems to be nothing of value on the web page, but after reading through it we notice               something important under services. It references a customer login.
+      
+      ![image](https://user-images.githubusercontent.com/29686845/132760926-860112b0-c9ad-4d96-972c-c29457782e18.png)
+
+  - next We will us burp suit to look furhter into the backend of the webpage. First I am going to show you how to set up     the proxy burp suite will need (If you have not already) in the next step. 
+
+Step 3: Burp Suite
+  - 
