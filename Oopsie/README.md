@@ -53,4 +53,9 @@ Step 3: Burp Suite
     - click on you foxy proxy icon and click on your new proxy and refresh the page.
     - You will see that in burp suite the proxy tab and the intercept subtab both turned orange. If we look into               intercept we will see the packet that was just sent to refresh the page. 
       ![image](https://user-images.githubusercontent.com/29686845/132775431-0bced0eb-1f7b-4190-9077-20a58d6b8161.png)
-
+    - You may notice that the webpage is loading and not doing anything. Since we intercepted the package sent from the         website it is waiting for us to forward the packet. 
+    - Now lets click on the target tab and look into the subtab Site Map
+      ![image](https://user-images.githubusercontent.com/29686845/132776295-3384f904-6f9c-428a-be76-e89d22d3a205.png)
+    - After looking through the files we can see the login path
+    - Lets add that to our URL and see what happens. 
+      ![image](https://user-images.githubusercontent.com/29686845/132776412-3e61c2d7-b1e4-412a-8d0c-8bb7a857f824.png)
