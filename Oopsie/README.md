@@ -28,3 +28,7 @@ Step 2: Open Ports
       ![image](https://user-images.githubusercontent.com/29686845/132754134-8397a004-482f-4dd5-a56f-ba76c495c538.png)
 
       ![image](https://user-images.githubusercontent.com/29686845/132754201-8f167c3e-0167-4436-a468-010bd8470afd.png)
+
+  - Now lets take a look at Port 80
+    - We will do this by opening a web browser and typing the IP Address of the machine 10.10.10.28
+    -     http://10.10.10.28
