@@ -50,6 +50,7 @@ Step 3: Burp Suite
       ![image](https://user-images.githubusercontent.com/29686845/132774125-3767037e-b934-49e8-aec3-17050de88ee4.png)
     - Lastly click save.
   - Now that we have everything configured. We are going to use Burp to intercept, change, and modify packets that are       going from the web page to the web server and see what we can access.
-    - 
+    - click on you foxy proxy icon and click on your new proxy and refresh the page.
+    - You will see that in burp suite the proxy tab and the intercept subtab both turned orange. If we look into               intercept we will see the packet that was just sent to refresh the page. 
 
 
