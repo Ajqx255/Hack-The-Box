@@ -1,6 +1,6 @@
-# Hack-The-Box
+# Hack-The-Box: Archetype
 
-# HTB---Archetype
+
 My Journy through Hack the Box 
 
 # Enumeration
