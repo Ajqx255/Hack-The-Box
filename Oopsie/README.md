@@ -59,3 +59,10 @@ Step 3: Burp Suite
     - After looking through the files we can see the login path
     - Lets add that to our URL and see what happens. 
       ![image](https://user-images.githubusercontent.com/29686845/132776412-3e61c2d7-b1e4-412a-8d0c-8bb7a857f824.png)
+    - Lets try the credentials that we learned from the previous machine. I tried both users and it do not work. 
+    - After some guess work I was able to find the Username and Password. 
+      - Username: Admin
+      - Password: MEGACORP_4dm1n!!
+    - As you will see below we got access to the Admin Panel of the website.
+      ![image](https://user-images.githubusercontent.com/29686845/132804696-f989a29c-c914-4c48-aa1a-ef471ace2984.png)
+
