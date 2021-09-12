@@ -89,8 +89,8 @@ Step 3: Burp Suite
       ![image](https://user-images.githubusercontent.com/29686845/132969575-838ade83-ff1c-43b4-9d4b-e4b464b0ffb6.png)
     - Lastly click the subtab options and at the bottom make sure the section "Rediretions" says always adnd "Process             cookies in redirections" is checked
       ![image](https://user-images.githubusercontent.com/29686845/132969711-a019e061-b0b9-4ce5-9875-27feb657e8af.png)
-    - Once we have everything done click the funnest button that is here.... "Start Attack".
-    - 
+    - Once we have everything done click the funnest button that is here.... "Start Attack". 
+    - This may take some time to complete so now seems like a good time to take a break!
 
 
  
