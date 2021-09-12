@@ -96,7 +96,10 @@ Step 3: Burp Suite
     - We want to click on one of the requests and read through the response sections of it or I like to use the search         feature.
     - I know we are looking for the user/role super admin so lets search for that and work a way through the packts. 
       ![image](https://user-images.githubusercontent.com/29686845/132971130-a00be38c-9a4a-4cbb-b9ad-cb859f86e2ea.png)
-    - 
+    - We see some helpful information such as a 5 digit number the user super admin and an email address. 
+      - User #: 86575
+      - Role: super admin
+      - Email: superadmin@megacorp.com
 
 
 
