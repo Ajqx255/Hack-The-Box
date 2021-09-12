@@ -108,4 +108,7 @@ Step 3: Burp Suite
   - Okay that was a long section with a lot of information! I am happy to say we made it this far and we should be proud     of our progress!!!
 
 # FootHold
+  - Now we are going to focus on gaining a foot hold into thier network and possible gain a persistant connection on         their machine. 
+  - To do this we are going to test to if the developer of their webage left anything out. Since we are trying to upload     a file we can see if they forgot or ignored to add user input validiation to their web server/web page. 
+    -  Check out this link if you want to learn more about input validatoin https://www.whitehatsec.com/glossary/content/input-validation
 
