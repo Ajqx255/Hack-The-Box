@@ -87,7 +87,7 @@ Step 3: Burp Suite
     - Paste the for loop into your terminal and run the command. Copy the output and past it into the list as seen below.
     
       ![image](https://user-images.githubusercontent.com/29686845/132969575-838ade83-ff1c-43b4-9d4b-e4b464b0ffb6.png)
-    - Lastly click the subtab options and at the bottom make sure the section Rediretions says always. 
+    - Lastly click the subtab options and at the bottom make sure the section "Rediretions" says always adnd "Process             cookies in redirections" is checked
       ![image](https://user-images.githubusercontent.com/29686845/132969711-a019e061-b0b9-4ce5-9875-27feb657e8af.png)
 
 
