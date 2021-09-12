@@ -81,14 +81,10 @@ Step 3: Burp Suite
       ![image](https://user-images.githubusercontent.com/29686845/132967985-009bb8ae-a407-48cf-b4ea-afee83f8095a.png)
     - Click the Payloads tab.
     - Now we are going to create and use a simple for loop to simplify our payload
-    -     for i in 'seq 1 100'; do echo $i; done
+    -     for i in `seq 1 100`; do echo $i; done
       - If you are unframiliar with scripting There are many schools of though on what programming language you should           use. I started with python and I highly recommend this book "Python Crash Course 2nd Edition..." by Eric Matthes
       - In this case we saying for i (the variable) in the sequence 1 to 100 (the condition) do echo (echo is a command           to print to the screen) $i (The $ is a wildcard) i (The variable). (That was my best attempt to expain it for             you! I am still learning myself -.-)
     - Paste the for loop into your terminal and run the command. Copy the output and past it into the list as seen below.
     
       ![image](https://user-images.githubusercontent.com/29686845/132969575-838ade83-ff1c-43b4-9d4b-e4b464b0ffb6.png)
  
-
-
-
-  
