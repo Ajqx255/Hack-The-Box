@@ -100,6 +100,9 @@ Step 3: Burp Suite
       - User #: 86575
       - Role: super admin
       - Email: superadmin@megacorp.com
+    - Now that we have the super admin user's number lets go back to the uploads page, capture the packet being sent, and       modify the user number in the packet and lets see what happens. 
+      ![image](https://user-images.githubusercontent.com/29686845/132971308-b65dfa48-726f-4c80-b6f3-a35664039f9d.png)
+
 
 
 
