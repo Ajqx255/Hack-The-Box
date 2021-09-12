@@ -102,6 +102,9 @@ Step 3: Burp Suite
       - Email: superadmin@megacorp.com
     - Now that we have the super admin user's number lets go back to the uploads page, capture the packet being sent, and       modify the user number in the packet and lets see what happens. 
       ![image](https://user-images.githubusercontent.com/29686845/132971308-b65dfa48-726f-4c80-b6f3-a35664039f9d.png)
+    - Success we are in! 
+      ![image](https://user-images.githubusercontent.com/29686845/132971331-a7a6036d-e25e-40c9-9d5f-67bdb4110383.png)
+
 
 
 
