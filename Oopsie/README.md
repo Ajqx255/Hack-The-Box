@@ -82,7 +82,7 @@ Step 3: Burp Suite
     - Click the Payloads tab.
     - Now we are going to create and use a simple for loop to simplify our payload
     -     for i in 'seq 1 100'; do echo $i; done
-      - If you are unframiliar with scripting There are many schools of though on what programming language you should           use. started with python and I highle recommend this book "Python Crash Course 2nd Edition" by Eric Matthes
+      - If you are unframiliar with scripting There are many schools of though on what programming language you should           use. I started with python and I highly recommend this book "Python Crash Course 2nd Edition..." by Eric Matthes
 
 
 
