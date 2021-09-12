@@ -79,6 +79,9 @@ Step 3: Burp Suite
     - We are only interested in the id number so lets clear the selected items with the clear tab on the right hand side       of burpsuite. 
     - highlight the id number (1) and click add.
       ![image](https://user-images.githubusercontent.com/29686845/132967985-009bb8ae-a407-48cf-b4ea-afee83f8095a.png)
+    - Click the Payloads tab.
+    - Now we are going to create and use a simple for loop to simplify our payload
+    -     for i in 'seq 1 100'; do echo $i; done
 
 
 
