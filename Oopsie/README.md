@@ -113,4 +113,4 @@ Step 3: Burp Suite
     -  Check out this link if you want to learn more about input validatoin https://www.whitehatsec.com/glossary/content/input-validation
   -  We are going to try to upload a php reverse shell. 
     - Kali already has php reversehell that we can use. 
-    -       /usr/share/webshells/php/php-reverse-shell.php
+          /usr/share/webshells/php/php-reverse-shell.php
