@@ -114,9 +114,9 @@ Step 3: Burp Suite
        https://www.whitehatsec.com/glossary/content/input-validation
   - We are going to try to upload a php reverse shell.
     - Kali Linux already has a php reverse Shell that we can use in /usr/share/webshells/php/php-reverse-shell.ph
-      - Make sure that before you upload the reverse shell you update the IP address and the port number.
-      - to check you IP address run if config
-      - Change the port to what ever is not in use normally we use port 4444
+      - Make sure that before you upload the reverse shell you update the IP address and the port number with nano.
+      - to check you IP address run ifconfig
+      - Change the port to what ever is not in use normally we can use port 4444
     - lets click the browse tab and go through the directorise in the GUI (I know YUCKK!) and upload the reverse shell
     - Once uploaded intercept the packet with burp suite and change the user number as we did before to the super user         number as seen below. 
       ![image](https://user-images.githubusercontent.com/29686845/133001076-a213148f-b1d7-4ddb-a525-56ee140b8d37.png)
