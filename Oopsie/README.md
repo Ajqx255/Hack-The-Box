@@ -39,7 +39,8 @@ Step 2: Open Ports
   - Next we will us burp suit to look furhter into the backend of the webpage. First I am going to show you how to set up     the proxy burp suite will need (If you have not already) in the next step. 
 
 Step 3: Burp Suite
-  - We will need to set up the foxy proxy standard extenision within you firefox browser.
+  - First if you want to learn about Burpsuite check out their webpage https://portswigger.net/burp
+  - To start we will need to set up the foxy proxy standard extenision within you firefox browser.
     - To do this we click on the three lines on the top left of your browser, click on add ons, search for "foxy proxy",       click into foxy proxy standard, and click add to firefox. 
   - Open burp suite and create a temporary new project. 
   - Once you are into burp you will need to configure your proxy to run through foxy proxy.
@@ -104,10 +105,7 @@ Step 3: Burp Suite
       ![image](https://user-images.githubusercontent.com/29686845/132971308-b65dfa48-726f-4c80-b6f3-a35664039f9d.png)
     - Success we are in! 
       ![image](https://user-images.githubusercontent.com/29686845/132971331-a7a6036d-e25e-40c9-9d5f-67bdb4110383.png)
+  - Okay that was a long section with a lot of information
 
+# FootHold
 
-
-
-
-
- 
