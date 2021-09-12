@@ -65,9 +65,14 @@ Step 3: Burp Suite
       - Password: MEGACORP_4dm1n!!
     - As you will see below we got access to the Admin Panel of the website.
       ![image](https://user-images.githubusercontent.com/29686845/132804696-f989a29c-c914-4c48-aa1a-ef471ace2984.png)
-    - After exploiring the webpage. we will notice something that should caught my attention in the uploads page. 
+    - After exploiring the webpage. we will notice something that should catch our attention in the uploads page. 
       ![image](https://user-images.githubusercontent.com/29686845/132966320-43c4b9b2-e0f8-4b45-8523-9e122cb40938.png)
     - We can see that that there is another user account: Super Admin with higher privilges that can upload files onto         the web server. 
     - Intercepting packets with burp we will notice something else interesting. when going to the accounts tab we can see       a get request the provides an id number as seen below
       ![image](https://user-images.githubusercontent.com/29686845/132966475-9d734ce7-86e5-4e02-a731-50feda6a33b1.png)
+    - We will want to see if we can manipulate the value and gather enough information to get the user id of the super         admin account. We can do this with burp suites intruder mode. 
+    - Press CTL + i on the packet we collected. (You will see the Intruder tab light up orange.)
+    - Click on the intruder tab, make sure the subtab Target has the correct IP that we are attackin. In this case it wil       be 10.10.10.28. 
+      ![image](https://user-images.githubusercontent.com/29686845/132967868-4922006e-bf25-4ef9-9e34-9510763353c5.png)
+
   
