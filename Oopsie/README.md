@@ -112,7 +112,18 @@ Step 3: Burp Suite
   - To do this we are going to test to if the developer of their webage left anything out. Since we are trying to upload     a file we can see if they forgot or ignored to add user input validiation to their web server/web page. 
     -  Check out this link if you want to learn more about input validation
        https://www.whitehatsec.com/glossary/content/input-validation
-  -  We are going to try to upload a php reverse shell.
-    - Kali Linux already has a php reverse Shell that we can use in /usr/share/webshells/php/php-reverse-shell.php
-    - lets click the browse tab and go through the directorise in the GUI (I know YUCKK!) and upload the reverse shell.
-    - Once uploaded intercept the packet with burp suite and change the user number as we did before to the super user         number. 
+  - We are going to try to upload a php reverse shell.
+    - Kali Linux already has a php reverse Shell that we can use in /usr/share/webshells/php/php-reverse-shell.ph
+      - Make sure that before you upload the reverse shell you update the IP address and the port number.
+      - to check you IP address run if config
+      - Change the port to what ever is not in use normally we use port 4444
+    - lets click the browse tab and go through the directorise in the GUI (I know YUCKK!) and upload the reverse shell
+    - Once uploaded intercept the packet with burp suite and change the user number as we did before to the super user         number as seen below. 
+      ![image](https://user-images.githubusercontent.com/29686845/133001076-a213148f-b1d7-4ddb-a525-56ee140b8d37.png)
+      ![image](https://user-images.githubusercontent.com/29686845/133001094-8b15c08f-bced-4046-91f2-d35c023c7a03.png)
+    - Success we were able to upload the php file.
+  - We now have our reverse shell uploaded we need to figure out where it is and how we can access it.
+    - Luckily for us we can use the tool dirsearch. to do this run the following commands. 
+      -       git clone https://github.com/maurosoria/dirsearch.git
+      - cd to the directory you put git clone in. (I am moving everything into opt) 
+
