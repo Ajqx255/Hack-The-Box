@@ -91,6 +91,14 @@ Step 3: Burp Suite
       ![image](https://user-images.githubusercontent.com/29686845/132969711-a019e061-b0b9-4ce5-9875-27feb657e8af.png)
     - Once we have everything done click the funnest button that is here.... "Start Attack". 
     - This may take some time to complete so now seems like a good time to take a break!
+    - Now that we are back. our attack should be finished. and you should a see an output like the one below. 
+      ![image](https://user-images.githubusercontent.com/29686845/132971070-85395582-33bf-4d86-97c3-80c0b3836bc8.png)
+    - We want to click on one of the requests and read through the response sections of it or I like to use the search         feature.
+    - I know we are looking for the user/role super admin so lets search for that and work a way through the packts. 
+      ![image](https://user-images.githubusercontent.com/29686845/132971130-a00be38c-9a4a-4cbb-b9ad-cb859f86e2ea.png)
+    - 
+
+
 
 
  
