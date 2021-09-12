@@ -110,8 +110,8 @@ Step 3: Burp Suite
 # FootHold
   - Now we are going to focus on gaining a foot hold into thier network and possible gain a persistant connection on         their machine. 
   - To do this we are going to test to if the developer of their webage left anything out. Since we are trying to upload     a file we can see if they forgot or ignored to add user input validiation to their web server/web page. 
-    -  Check out this link if you want to learn more about input validatoin https://www.whitehatsec.com/glossary/content/input-validation
-
+    -  Check out this link if you want to learn more about input validation
+       https://www.whitehatsec.com/glossary/content/input-validation
   -  We are going to try to upload a php reverse shell.
     - Kali Linux already has a php reverse Shell that we can use in /usr/share/webshells/php/php-reverse-shell.php
     - lets click the browse tab and go through the directorise in the GUI (I know YUCKK!) and upload the reverse shell.
