@@ -74,5 +74,9 @@ Step 3: Burp Suite
     - Press CTL + i on the packet we collected. (You will see the Intruder tab light up orange.)
     - Click on the intruder tab, make sure the subtab Target has the correct IP that we are attackin. In this case it wil       be 10.10.10.28. 
       ![image](https://user-images.githubusercontent.com/29686845/132967868-4922006e-bf25-4ef9-9e34-9510763353c5.png)
+    - Click on the sub tab positions. We will see multiple selections highlighted, but we only want to focus on the             section labled ID.
+      ![image](https://user-images.githubusercontent.com/29686845/132967911-6898ddb6-e97b-48b9-b1ef-c236c685c70b.png)
+    - 
+
 
   
