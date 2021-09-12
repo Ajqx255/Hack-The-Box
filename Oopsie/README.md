@@ -105,7 +105,7 @@ Step 3: Burp Suite
       ![image](https://user-images.githubusercontent.com/29686845/132971308-b65dfa48-726f-4c80-b6f3-a35664039f9d.png)
     - Success we are in! 
       ![image](https://user-images.githubusercontent.com/29686845/132971331-a7a6036d-e25e-40c9-9d5f-67bdb4110383.png)
-  - Okay that was a long section with a lot of information
+  - Okay that was a long section with a lot of information! I am happy to say we made it this far and we should be proud     of our progress!!!
 
 # FootHold
 
