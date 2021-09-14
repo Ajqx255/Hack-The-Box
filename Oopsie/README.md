@@ -126,4 +126,6 @@ Step 3: Burp Suite
     - Luckily for us we can use the tool dirsearch. to do this run the following commands. 
       -       git clone https://github.com/maurosoria/dirsearch.git
       - cd to the directory you put git clone in. (I am moving everything into opt) 
+      - once we are there we are going to run our dirsearch.py with the commmand below
+      -       sudo python3 dirsearch.py -u http://10.10.10.28 -e php
 
