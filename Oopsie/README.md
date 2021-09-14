@@ -153,7 +153,24 @@ Step 4: Calling our Reverse shell.
       - if you nammed your file anything else use the name of the file you uploaded at the end of the path
   - Once ran we obtain a www-data shell, but we still have to upgrade it!
     ![image](https://user-images.githubusercontent.com/29686845/133340021-920411b8-e932-47c8-9598-b0dab56c3cb8.png)
-  - Now that we have a shell we are going to to enter the following commands
+    
+Step 5: Upgrading our Shell
+  - Now that we have a shell we are going to to enter the following commands to upgrade it
     -     SHELL=/bin/bash script -q /dev/null
       ![image](https://user-images.githubusercontent.com/29686845/133341758-5811fa16-b6e0-429d-83b9-a2a9c313cb53.png)
       - There is another walkthrough that will tell you to type in more commands from there, but it does not work. I           have tried many other ways and it always breaks the shell. so lets do this instead. 
+    - once we run the above command we get a command line that we are more framiliar too with the user@machine.
+      ![image](https://user-images.githubusercontent.com/29686845/133342381-80d0d165-e48c-4b6d-ac9f-e0babb9b08a1.png)
+    - We now have an upgraded shell!
+
+# Lateral Movement
+
+Step 1: finding the database
+  - type pwd (print working directory) and we can see that we are in the root directory. 
+  - knowing we are looking for the web page database we have to find it and there are multiple ways to this
+    -  If you are framiliar with linux file system you will know that it is in /var/www/html
+    -  if you are not you can take the time to search through everything.
+  - Since I know the name of the file I am going to use the locate command. 
+    -     locate db.php
+       ![image](https://user-images.githubusercontent.com/29686845/133343786-f955bbca-9188-403e-bf3b-ace8e3d3b747.png)
+  - 
