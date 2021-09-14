@@ -124,7 +124,11 @@ Step 3: Burp Suite
     - Success we were able to upload the php file.
   - We now have our reverse shell uploaded we need to figure out where it is and how we can access it.
     - Luckily for us we can use the tool dirsearch. to do this run the following commands. 
+      - To get dirsearch run the follwowing command.
       -       git clone https://github.com/maurosoria/dirsearch.git
       - cd to the directory you put git clone in. (I am moving everything into opt) 
-      - once we are there we are going to run our dirsearch.py with the commmand below
-      -       sudo python3 dirsearch.py -u http://10.10.10.28 -e php
+    - once we are there we are going to run our dirsearch.py with the commmand below
+    -       sudo python3 dirsearch.py -u http://10.10.10.28 -e php
+    - After running this command we will see the output showing all directories within the ip 10.10.10.28
+      ![image](https://user-images.githubusercontent.com/29686845/133331077-d8c817fc-6695-4da9-88d3-43eb750346f5.png)
+
