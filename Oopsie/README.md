@@ -187,5 +187,6 @@ Step 2: Read the Database
 Step 1: robert
   - We should run the command id to see what permissions and groups robert has accesss to.
     ![image](https://user-images.githubusercontent.com/29686845/133344841-4ae3e016-05ca-4eb8-b160-c4a8669f96aa.png)
-  - We can see he is apart of the group "bugtracker"
-
+  - We can see he is apart of the group "bugtracker". So lets find it.
+    - We can use the find command to see if there is anything related and where it is to bugtracker.
+    -       find -type f - group bugtracker 2>/dev/null
