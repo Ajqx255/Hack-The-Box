@@ -128,4 +128,3 @@ Step 3: Burp Suite
       - cd to the directory you put git clone in. (I am moving everything into opt) 
       - once we are there we are going to run our dirsearch.py with the commmand below
       -       sudo python3 dirsearch.py -u http://10.10.10.28 -e php
-
