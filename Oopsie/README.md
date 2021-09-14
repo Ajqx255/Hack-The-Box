@@ -173,4 +173,19 @@ Step 1: finding the database
   - Since I know the name of the file I am going to use the locate command. 
     -     locate db.php
        ![image](https://user-images.githubusercontent.com/29686845/133343786-f955bbca-9188-403e-bf3b-ace8e3d3b747.png)
-  - 
+  - Now we can see that it is located at /var/www/html/cdn-cgi/login/
+Step 2: Read the Database
+  - We will use the command cat to read the file. 
+    -     cat db.php
+    ![image](https://user-images.githubusercontent.com/29686845/133344237-3c5c3c81-cd33-442f-b99e-a9cf0bb810a0.png)
+  - We see that there is another user account located in the DataBase
+    - Uesrname: Robert
+    - Password: M3g4C0rpUs3r!
+
+# Prvilege Escallation
+
+Step 1: robert
+  - We should run the command id to see what permissions and groups robert has accesss to.
+    ![image](https://user-images.githubusercontent.com/29686845/133344841-4ae3e016-05ca-4eb8-b160-c4a8669f96aa.png)
+  - We can see he is apart of the group "bugtracker"
+
