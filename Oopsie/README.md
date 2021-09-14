@@ -153,5 +153,7 @@ Step 4: Calling our Reverse shell.
       - if you nammed your file anything else use the name of the file you uploaded at the end of the path
   - Once ran we obtain a www-data shell, but we still have to upgrade it!
     ![image](https://user-images.githubusercontent.com/29686845/133340021-920411b8-e932-47c8-9598-b0dab56c3cb8.png)
-  - 
-
+  - Now that we have a shell we are going to to enter the following commands
+    -     SHELL=/bin/bash script -q /dev/null
+      ![image](https://user-images.githubusercontent.com/29686845/133341758-5811fa16-b6e0-429d-83b9-a2a9c313cb53.png)
+      - There is another walkthrough that will tell you to type in more commands from there, but it does not work. I           have tried many other ways and it always breaks the shell. so lets do this instead. 
