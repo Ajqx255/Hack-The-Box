@@ -187,6 +187,59 @@ Step 2: Read the Database
 Step 1: robert
   - We should run the command id to see what permissions and groups robert has accesss to.
     ![image](https://user-images.githubusercontent.com/29686845/133344841-4ae3e016-05ca-4eb8-b160-c4a8669f96aa.png)
-  - We can see he is apart of the group "bugtracker". So lets find it.
+  - first lets look around roberts account to see if we can find anything of interest.
+    - cd /home/robert
+    - ls once you are roberts profile. 
+    - We will notice a user.txt file. 
+    - Cat the file and we now have the system flag!!!
+  - Now lets go back to root
+    - cd / 
+  -   Now we can see he is apart of the group "bugtracker". So lets find it.
     - We can use the find command to see if there is anything related and where it is to bugtracker.
-    -       find -type f -group bugtracker 2>/dev/null
+    -       find / -type f -group bugtracker 2>/dev/null
+      ![image](https://user-images.githubusercontent.com/29686845/133351592-ff9466d8-45bb-4e00-8ed3-1b2578a7adac.png)
+    - we find something in /usr/bin/bugtracker so lets take a look
+    - We can try to run the file by typing /usr/bin/bugtracker, but we will notice we do not have permissions. 
+  - Since we have roberts credentials and we know that his account has access to the bugtrackers group lets move on to     him.
+    - run the command the swith user command below se we can access his account.
+    -       su robert
+    - Then type in the password we have found. (it is listed above just incase you forgot.
+      ![image](https://user-images.githubusercontent.com/29686845/133352497-b4ce3bc0-ce8d-4f55-b441-679527812614.png)
+    - We now have access to the user roberts account lets run the bugtracker executable again.  
+    - we seem to get an output, but it doesn't seem to get us anywhere. 
+      ![image](https://user-images.githubusercontent.com/29686845/133352858-b5be73a5-5dd1-470b-9f00-921f95033628.png)
+
+Step 2: Strings
+  - Since we couldn't find anything with the file maybe we can gather some information about what it is doing with the     strings command.
+  - Strings: is useful for printing the context of non text files. If you want to learn more abou it check out the         following link https://linux.die.net/man/1/strings
+  - Now lets run the command below
+    -     strings /usr/bin/bugtracker
+    - looking at the output the only thing that makes sense to me is cat /root/reports/
+
+Step 3: Bad Cat
+  - We can notice that the program call to read cat /root/reports, but we do not have permission to see what is in that     directory. 
+  - One thing we can do is see if we can get the machine to call a path that we choose. In this case we want to include     our current working directory.
+  - In other words we are going to make a malicious cat command.
+    - run the follwoing commands in this order.
+     -      export PATH=/tmp:$PATH
+     -      cd /tmp/
+     -      echo '/bin/sh' > cat
+     -      chmod +x cat
+  - Next we can run our bugtracker command and enter the id of 1.
+  - you will notice this time around there is no output but instead the $ symbol turned into a # symbol.
+    - This means that should be a root user now. 
+    - run an id command to cehck
+      ![image](https://user-images.githubusercontent.com/29686845/133355192-31befe56-b528-48fa-9ca6-30aa2ef1e43a.png)
+    - Congrats!!! we got root! which means we are the higest privledge user. 
+
+# Post Exploitation
+
+  - Since we now have a root account we might as well check the root folder and see what is in there.
+    - there are only to two things in there a reports directory and a root.txt
+    - I tried to cat the txt file, but it did not work.
+    - I used the less command and gave out a string of output as seen below
+      ![image](https://user-images.githubusercontent.com/29686845/133356503-5efa4c82-c22e-4f68-ab87-c5da0f095422.png)
+    - Now we got the user flag! 
+ 
+
+Thats it we are all done! As always thank you for commiting your time and going through this journey with me. I will see you all on the next one.
