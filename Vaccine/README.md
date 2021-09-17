@@ -13,7 +13,7 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     ![image](https://user-images.githubusercontent.com/29686845/133384641-ee391953-ce3f-40a4-8a4e-c50499c56ed3.png)  
   - Which did not work, but it dawned on me as soon as we were denied permisson. (Dont Laugh at me... or do its fun to laugh and learn from our mistakes) there is a big hint in the name ftpuser. we have a open port and protocol that use ftp and [FileZilla](https://filezilla-project.org/) is a ftp software so we might have better luck there. 
 3. Port 21 FTP
-  - Well run the [FTP](https://linux.die.net/man/1/ftp) command as seen below:
+  - We will run the [FTP](https://linux.die.net/man/1/ftp) command as seen below:
     - `ftp 10.10.10.46`
     - ![image](https://user-images.githubusercontent.com/29686845/133386609-e80d051e-f851-4fe8-9552-d98a426f5aae.png)
   - Now that we are succesfully connected lets see what we can find.
@@ -31,7 +31,9 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - We will run the command `zip2john backup.zip > hash.txt`
     - ![image](https://user-images.githubusercontent.com/29686845/133515214-b0de851d-4373-407f-8421-3d5d899f124e.png)
     - John can now read teh file so lets go agead and crack it with the follwoing command:
-    - `john hash.txt --fork=4 -w= /usr/share/wordlists/rockyou.txt'
+    - `sudo john hash.txt --fork=4 -w= /usr/share/wordlists/rockyou.txt'
       - incase you were wondering --fork is stating the amount of threads or instances it will run simultaniously.
       - -w= is selecting a wordlist that you provide. In kali linux there are already wordlists install under /usr/share/wordlists. 
-    -  
+    -  Time frames will change based on the resources you are running, but within a matter of seconds john was able to crack to the hash:
+    -  ![image](https://user-images.githubusercontent.com/29686845/133854092-b087597b-2285-4c55-bcdf-2074946b63ca.png)
+
