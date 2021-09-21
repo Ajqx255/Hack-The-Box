@@ -93,6 +93,18 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - Now that we have our upgraded reverse shell lets move on to gaining privilege escilation
 
 # Privlege Escalation
-1. 
+1. html
+  - We know that we are looking at at a web server database so lets look at the `/var/www/html` and see if we can find anyhting in the web page files that the developer forgot to take out.
+    - once there i recogonized the `dashbord.php` file that was in our URL earlier.
+    - I took a look in there with the cat command. `cat dashboard.php`
+    - inside the file we find the credentials for the user postgres
+      ![image](https://user-images.githubusercontent.com/29686845/134261757-253936eb-f311-4c3b-b865-b8f8f618d174.png)
+    - UN: `postgres` PW: `P@s5w0rd!`
+2. Sudo
+  - So now that we have the user password we can see if we have any sudo permissions.
+    - run the command `sudo -l` (lowercase L). It prompts for our password: `P@s5w0rd!` and shows us where we have sudo permissions and what commands we can run as a sudo or super user. 
+      ![image](https://user-images.githubusercontent.com/29686845/134262172-335c02c9-bc30-4948-ab00-9732d559c985.png)
+    - 
+
 
     
