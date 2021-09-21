@@ -66,10 +66,18 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - We can also see this information when we inspect the web page source code under the storage tab.
       ![image](https://user-images.githubusercontent.com/29686845/134251976-0f94bc71-70b6-4c06-9364-f723c604d70f.png)
   - Now that we have the session id/cookie we can use [sqlmap](https://sqlmap.org/) to see if there are any weaknesses or vulnerable area's ind the database. 
-    - `sqlmap -u http://10.10.10.46/dashboard.php?search=a --cookie=PHPSESSID=0h8aobaj9glv58eeme3bsb0l0g'
+    - `sqlmap -u http://10.10.10.46/dashboard.php?search=a --cookie=PHPSESSID=0h8aobaj9glv58eeme3bsb0l0g`
       - You PHPSESSID will probably be different make sure you use you session id and not this one.
       ![image](https://user-images.githubusercontent.com/29686845/134252721-bb9bd463-fd6a-49b1-b71b-5360f616c369.png)
       ![image](https://user-images.githubusercontent.com/29686845/134253363-15bc34b1-a0c6-47f0-a099-0a94b8363064.png)
     - The output of our command shows that the back end of the Database Management system [DBMS](https://www.altexsoft.com/blog/business/comparing-database-management-systems-mysql-postgresql-mssql-server-mongodb-elasticsearch-and-others/) is [PostgreSQL](https://www.postgresql.org/)
+    - This means that sqlmap found that there were many injection vulnerabilietes within this database. 
+      - looking in burpsuite will show you a better idea of this with issue definitions
+        ![image](https://user-images.githubusercontent.com/29686845/134255984-052aef09-d44f-40d2-88da-7f7eb31c97ee.png)
+    - sqlmap provides an easy way to get a shell with this vulnerabilites. it is as easy as adding `--os-shell` to the end of our previous command which I will show right below this
+    - `sqlmap -u 'http://10.10.10.46/dashboard.php?search=a' --cookie="PHPSESSID=0h8aobaj9glv58eeme3bsb0l0g" --os-shell`
+      - I had issues with this for this. It is always important to check you syntax very diligently. I was missing the last character on my cookie when I copied and pasted it into the command. That prevented my from obtaining a shell for a little bit. 
+      - ALWAYS CHECK YOUR SYNTAX 
+
 
 
