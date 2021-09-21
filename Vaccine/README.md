@@ -54,3 +54,8 @@ Notification: The words that are hyperlinked are to resources to learn more abou
       ![image](https://user-images.githubusercontent.com/29686845/134099184-3a44f86e-954a-4643-a105-9b71f275d3f5.png)
   - We now know that the username and the password `admin` & `qwerty789`
   
+# FootHold
+  - I tried connecting through port 22 and the credentails did not work. so lets scratch that all together.
+  - We know port 80 http is open lets take a look at the webpage and see what we find.
+    - The website brings us to a login page. I entered the credianls `admin | qwerty789`. This gets us a successful login.
+  - 
