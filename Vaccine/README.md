@@ -47,5 +47,8 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - Once opened on we see some useful infromation. We find a set of credentials as seen below.
       ![image](https://user-images.githubusercontent.com/29686845/134093351-ecc751ba-0c94-4f1b-91f1-e208daed70f3.png)
     - Username: `admin` & Password: `2cb42f8734ea607eefed3b70af13bbd3`
+      - This does not seem like a regular password, or at least not one that would be easily used or even memorized. That is because it is not a password it is a hash. it as in md5 hash to be exact. How can we tell? well luckily for us they made it easy. in the screenshot above the section right before password its says md5. 
 
-
+5. Cracking the Hash
+    - Lets see if we can crack it using [CrackStation](https://crackstation.net/). you can use other tools like hashcat, but it will talk some time to complete compaired to the seconds it takes CrackStation
+      ![image](https://user-images.githubusercontent.com/29686845/134099184-3a44f86e-954a-4643-a105-9b71f275d3f5.png)
