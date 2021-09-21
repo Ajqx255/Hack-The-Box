@@ -31,10 +31,20 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - We will run the command `zip2john backup.zip > hash.txt`
     - ![image](https://user-images.githubusercontent.com/29686845/133515214-b0de851d-4373-407f-8421-3d5d899f124e.png)
     - John can now read teh file so lets go agead and crack it with the follwoing command:
-    - `sudo john hash.txt --fork=4 -w= /usr/share/wordlists/rockyou.txt'
+    - `sudo john hash.txt --fork=4 -w= /usr/share/wordlists/rockyou.txt`
       - incase you were wondering --fork is stating the amount of threads or instances it will run simultaniously.
       - -w= is selecting a wordlist that you provide. In kali linux there are already wordlists install under /usr/share/wordlists. 
     -  Time frames will change based on the resources you are running, but within a matter of seconds john was able to crack to the hash:
     -  ![image](https://user-images.githubusercontent.com/29686845/133854092-b087597b-2285-4c55-bcdf-2074946b63ca.png)
-      -I had issues with running this command for some reason: It worked the one time and I am glad I took a screen shot of it then. I tried multiple times to look at it and figure out what I was doing wrong, but I couldn't find it. So I would say try it out first and if it doesn't work, dont go on a three day rabbit hole like I did just move on! lol.  
+        - I had issues with running this command for some reason: It worked the one time and I am glad I took a screen shot of it then. I tried multiple times to look at it and figure out what I was doing wrong, but I couldn't find it. So I would say try it out first and if it doesn't work, dont go on a three day rabbit hole like I did just move on! lol. 
+
+4. Opening the zip file.
+  - Now that we have the password `741852963` we can go ahead and unzip the backup.zip file and take a look inside.
+    - The results ended out as two files "index.php" & style.css". Both seem to be a programming language file. 
+      - [PHP](https://www.php.net/manual/en/intro-whatis.php)
+      - [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
+    - You can look into the folder using the cat command: `cat index.php`, the less command: `less index.php`, but personally I like to use [Virtual Studio Code](https://code.visualstudio.com/). It color coordinates everything and just makes it easier for me to read and write code.
+    - Once opened on we see some useful infromation that a set of credentials as seen below.
+      ![image](https://user-images.githubusercontent.com/29686845/134093351-ecc751ba-0c94-4f1b-91f1-e208daed70f3.png)
+
 
