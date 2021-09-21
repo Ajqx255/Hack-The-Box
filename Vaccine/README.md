@@ -44,7 +44,8 @@ Notification: The words that are hyperlinked are to resources to learn more abou
       - [PHP](https://www.php.net/manual/en/intro-whatis.php)
       - [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS)
     - You can look into the folder using the cat command: `cat index.php`, the less command: `less index.php`, but personally I like to use [Virtual Studio Code](https://code.visualstudio.com/). It color coordinates everything and just makes it easier for me to read and write code.
-    - Once opened on we see some useful infromation that a set of credentials as seen below.
+    - Once opened on we see some useful infromation. We find a set of credentials as seen below.
       ![image](https://user-images.githubusercontent.com/29686845/134093351-ecc751ba-0c94-4f1b-91f1-e208daed70f3.png)
+    - Username: `admin` & Password: `2cb42f8734ea607eefed3b70af13bbd3`
 
 
