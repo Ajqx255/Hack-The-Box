@@ -104,6 +104,9 @@ Notification: The words that are hyperlinked are to resources to learn more abou
   - So now that we have the user password we can see if we have any sudo permissions.
     - run the command `sudo -l` (lowercase L). It prompts for our password: `P@s5w0rd!` and shows us where we have sudo permissions and what commands we can run as a sudo or super user. 
       ![image](https://user-images.githubusercontent.com/29686845/134262172-335c02c9-bc30-4948-ab00-9732d559c985.png)
+    - We see at the bottom that we can run the command:
+    - `/bin/vi /etc/postgresql/11/main/pg_hba.conf` 
+    - so lets run that command and see what happens.
     - 
 
 
