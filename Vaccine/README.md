@@ -66,4 +66,10 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - We can also see this information when we inspect the web page source code under the storage tab.
       ![image](https://user-images.githubusercontent.com/29686845/134251976-0f94bc71-70b6-4c06-9364-f723c604d70f.png)
   - Now that we have the session id/cookie we can use [sqlmap](https://sqlmap.org/) to see if there are any weaknesses or vulnerable area's ind the database. 
-    - 
+    - `sqlmap -u http://10.10.10.46/dashboard.php?search=a --cookie=PHPSESSID=0h8aobaj9glv58eeme3bsb0l0g'
+      - You PHPSESSID will probably be different make sure you use you session id and not this one.
+      ![image](https://user-images.githubusercontent.com/29686845/134252721-bb9bd463-fd6a-49b1-b71b-5360f616c369.png)
+      ![image](https://user-images.githubusercontent.com/29686845/134253363-15bc34b1-a0c6-47f0-a099-0a94b8363064.png)
+    - The output of our command shows that the back end of the Database Management system [DBMS](https://www.altexsoft.com/blog/business/comparing-database-management-systems-mysql-postgresql-mssql-server-mongodb-elasticsearch-and-others/) is [PostgreSQL](https://www.postgresql.org/)
+
+
