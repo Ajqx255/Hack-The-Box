@@ -55,7 +55,15 @@ Notification: The words that are hyperlinked are to resources to learn more abou
   - We now know that the username and the password `admin` & `qwerty789`
   
 # FootHold
+1. Web Page Access
   - I tried connecting through port 22 and the credentails did not work. so lets scratch that all together.
   - We know port 80 http is open lets take a look at the webpage and see what we find.
     - The website brings us to a login page. I entered the credianls `admin | qwerty789`. This gets us a successful login.
-  - 
+  - There is not many relevant factors to the page, but it seems to be a car catalog with a functioning search bar that we might be able to exploit.
+2. Exploiting the Webpage
+  - Based on our last activity I used burpsuite to look into the page with site map and found that this webpage uses [cookies](https://www.kaspersky.com/resource-center/definitions/cookies). 
+    ![image](https://user-images.githubusercontent.com/29686845/134251827-8e4fce2d-2cfb-4a9b-86d3-75b574b0b420.png)
+    - We can also see this information when we inspect the web page source code under the storage tab.
+      ![image](https://user-images.githubusercontent.com/29686845/134251976-0f94bc71-70b6-4c06-9364-f723c604d70f.png)
+  - Now that we have the session id/cookie we can use [sqlmap](https://sqlmap.org/) to see if there are any weaknesses or vulnerable area's ind the database. 
+    - 
