@@ -53,3 +53,4 @@ Notification: The words that are hyperlinked are to resources to learn more abou
   - Lets see if we can crack it using [CrackStation](https://crackstation.net/). you can use other tools like hashcat, but it will talk some time to complete compaired to the seconds it takes CrackStation
       ![image](https://user-images.githubusercontent.com/29686845/134099184-3a44f86e-954a-4643-a105-9b71f275d3f5.png)
   - We now know that the username and the password `admin` & `qwerty789`
+  
