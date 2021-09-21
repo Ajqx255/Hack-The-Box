@@ -50,5 +50,5 @@ Notification: The words that are hyperlinked are to resources to learn more abou
       - This does not seem like a regular password, or at least not one that would be easily used or even memorized. That is because it is not a password it is a hash. it as in md5 hash to be exact. How can we tell? well luckily for us they made it easy. in the screenshot above the section right before password its says md5. 
 
 5. Cracking the Hash
-    - Lets see if we can crack it using [CrackStation](https://crackstation.net/). you can use other tools like hashcat, but it will talk some time to complete compaired to the seconds it takes CrackStation
+   - Lets see if we can crack it using [CrackStation](https://crackstation.net/). you can use other tools like hashcat, but it will talk some time to complete compaired to the seconds it takes CrackStation
       ![image](https://user-images.githubusercontent.com/29686845/134099184-3a44f86e-954a-4643-a105-9b71f275d3f5.png)
