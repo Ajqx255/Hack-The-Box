@@ -104,12 +104,28 @@ Notification: The words that are hyperlinked are to resources to learn more abou
   - So now that we have the user password we can see if we have any sudo permissions.
     - run the command `sudo -l` (lowercase L). It prompts for our password: `P@s5w0rd!` and shows us where we have sudo permissions and what commands we can run as a sudo or super user. 
       ![image](https://user-images.githubusercontent.com/29686845/134262172-335c02c9-bc30-4948-ab00-9732d559c985.png)
+    - before we run the command we have to run a python command:
+    - `python3 -c "import pty;pty.spawn('/bin/bash')"`
     - We see at the bottom that we can run the command:
     - `/bin/vi /etc/postgresql/11/main/pg_hba.conf` 
     - so lets run that command and see what happens.
     - we end up in the file using [VI](https://www.cs.colostate.edu/helpdocs/vi.html) file editor.
     - ![image](https://user-images.githubusercontent.com/29686845/134263584-8a8dc617-5b37-4c0b-848e-6d310c1b6fc6.png)
-    - 
+    - the output is going to look strange is it does above and it will not line up correctly, but that is okay. we are going to type our command wherever it is is set
+      - `:!/bin/bash` 
+      ![image](https://user-images.githubusercontent.com/29686845/134297716-cf59b578-148f-43ad-8291-7066147bb78e.png)
+    - You will see in the image above that in command is at the top left of the output, but once you hit enter you will get root.
+3. Root (
+Sorry there is no screen shots for this last part, but my machine was acting weird and I couldn't get it working to take screen shots. 
+  - Now that we have root we need to find the flag.
+    - `cd /` 
+    - now lets get into the root folder with `cd /root`
+    - In the folder you will see a file called root.txt
+    - you will find the system flag `dd6e058e814260bc70e9bbdef2715849`
+
+
+Congrats we did!!! As alwasy thank you for coming out and I will see you in the next one!
+
 
 
 
