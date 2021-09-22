@@ -19,5 +19,5 @@ Step 2: Port 80: HTTP
 Step 3: GoBuster
   - [GoBuster](https://tools.kali.org/web-applications/gobuster) is a tool that allows us to brute force URIs or             directories or files in webpages and to brute force DNS sub-domains. 
   - If you dont already have GoBuster installed (which I did not) Run the command `sudo apt install gobuster` 
-    - Lets run the command: `gobuster dir -u http://10.10.10.29/ -w /usr/share/wordlist/rockyou.txt`
+    - Lets run the command: `gobuster dir -u http://10.10.10.29/ -w /usr/share/wordlists/rockyou.txt`
 
