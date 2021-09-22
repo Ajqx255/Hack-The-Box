@@ -107,7 +107,10 @@ Notification: The words that are hyperlinked are to resources to learn more abou
     - We see at the bottom that we can run the command:
     - `/bin/vi /etc/postgresql/11/main/pg_hba.conf` 
     - so lets run that command and see what happens.
+    - we end up in the file using [VI](https://www.cs.colostate.edu/helpdocs/vi.html) file editor.
+    - ![image](https://user-images.githubusercontent.com/29686845/134263584-8a8dc617-5b37-4c0b-848e-6d310c1b6fc6.png)
     - 
+
 
 
     
