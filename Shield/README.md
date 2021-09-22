@@ -20,4 +20,10 @@ Step 3: GoBuster
   - [GoBuster](https://tools.kali.org/web-applications/gobuster) is a tool that allows us to brute force URIs or             directories or files in webpages and to brute force DNS sub-domains. 
   - If you dont already have GoBuster installed (which I did not) Run the command `sudo apt install gobuster` 
     - Lets run the command: `gobuster dir -u http://10.10.10.29/ -w /usr/share/wordlists/rockyou.txt`
+      - lets break this command down a little bit since we are running a new tool.
+      - gobuster: is the tool that we are calling to use
+      - dir: is the windows equvilent to ls
+      - -u: is to sepcifiy the target URL
+      - -w: is to specifiy a wordlist. In this case we are going to use the roclyou.txt.
+    - Now we are going to let this run while it brute forces the password so we can get into different directories.
 
