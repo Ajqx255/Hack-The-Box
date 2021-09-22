@@ -31,3 +31,4 @@ Step 3: GoBuster
     - We see that there is a is another directory /wordpress. so lets add that to our url. 
     - It should like `http://10.10.10.29/wordpress` 
 
+# Foothold
