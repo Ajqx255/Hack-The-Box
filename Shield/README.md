@@ -112,4 +112,4 @@ Step 2: Juicy Potato
 Step 1: Exploring
 
   - We start off in the system32 director in the windows server.... which we don'tt necessarily need so lets `cd \` to     get to our root directory.
-  - You will find our root.txt in `c:\Users\Administrator\Desktop`. We can cat the file to get the flag and input it       into hack the box.
+  - You will find our root.txt in `c:\Users\Administrator\Desktop`. We can use the command `get-content root.txt` to read the file and get the flag to input it into hack the box.
