@@ -61,4 +61,9 @@ Step 2: msfconsole
       ![image](https://user-images.githubusercontent.com/29686845/134686497-8936a54b-69f9-4fcd-b98b-b7c4f8f300c4.png)
     - We have all of our peramaters set now lets run the exploit. we can type `use` or `exploit` <-- the funniest one         of the two. 
       ![image](https://user-images.githubusercontent.com/29686845/134688488-b5465433-988a-429f-966f-d0d8d2ce9f40.png)
-    - 
+    - Now we have our meterpreter connection and we can get a shell by typing `shell` 
+      - shell can be a little finicky at times so we can work with it or we can upgrade our shell with netcat to               provide us with more stable shell.
+
+Step 3: Netcat
+
+  - 
