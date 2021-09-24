@@ -85,3 +85,12 @@ Step 3: Netcat
 # Privilege Escalation
 
 Here is a [cheatsheet](http://www.cs.columbia.edu/~sedwards/classes/2015/1102-fall/Command%20Prompt%20Cheatsheet.pdf) for linux to windows commands. We are going to need it moving forward since we have a shell into a windwos machcine.
+
+Step 1: System Information
+  - First lets get some information about the system we are conencted to and see if we can find a way to get admin/root permissions.
+    - Lets start by running the `systeminfo` command.
+      ![image](https://user-images.githubusercontent.com/29686845/134710727-8bc1854d-0610-4911-8430-dcfc1a83ba00.png)
+    - We see that we find that the os is Windows Server 2016 Standard, Version: 10.0.143393 Build 14383
+
+Step 2: Juicy Potato
+  - We are going to use a tool called [Juicy Potato](https://github.com/ohpe/juicy-potato.git). This is a varient of the tool [Rotton Potato](https://github.com/breenmachine/RottenPotatoNG). This allows services accounts to escalate to system privilges by leveraging the [BITS](https://docs.microsoft.com/en-us/windows/win32/bits/background-intelligent-transfer-service-portal). Along with privileged access tokens in order to complete a [MiTM](https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/) attack. 
