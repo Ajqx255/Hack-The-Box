@@ -120,6 +120,15 @@ Step 1: Exploring
     - ![image](https://user-images.githubusercontent.com/29686845/134748160-5f6d7b15-fbba-4f1a-ac7d-efaeeaba3010.png)
     - We see that we kind find the file we are looking for in `/usr/shar/windows-resources/mimikatz/` and there are to       different versions based on the bit version of windows we are working with. In this case I am going to use the         x64 or 64 bit version. `/usr/share/windows-resources/mimkatz/x64/mimikatz.exe`
     - I copied the mimkatz.exe to my shield directory. 
-    - Now lets upload it back to the server with msf console like we did earlier. 
-    - 
+    - Now lets upload it back to the server with msfconsole like we did earlier. 
+    - now in our administartor shell lets run the file with `./mimikatz.exe` 
+      ![image](https://user-images.githubusercontent.com/29686845/134748985-94e5ec64-af5e-4537-8110-a2dcdb765607.png)
+    - I did some research an I have an [unofficial guide](https://adsecurity.org/?page_id=1821) for mimikatz that             helped quite a bit. Undercommon commands we can see one that lists all avaiilable provider credentials.
+    - `sekurlsa::logonpasswrods`
+      ![image](https://user-images.githubusercontent.com/29686845/134749255-9a7159b1-f96b-4fbc-a3cf-e46dc3a8eba5.png)
+    - We see the only readable output that includes a username and password is for sandra's account. 
+    - Username `sandra` Password `Password1234!`
+    - That is it we now have pwned the Shield machine and even found a new set of credentals that could give us               persistent access to the machine if we ever needed to later. 
 
+# Thank You
+I really hope you enjoyed this walk through and this helped you learn a thing or too! It was a blast for me and I have learned a lot in the meantime! Thank your for checking out this review and I will see you again in the next one!
