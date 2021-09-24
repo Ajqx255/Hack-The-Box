@@ -112,4 +112,14 @@ Step 2: Juicy Potato
 Step 1: Exploring
 
   - We start off in the system32 director in the windows server.... which we don'tt necessarily need so lets `cd \` to     get to our root directory.
-  - You will find our root.txt in `c:\Users\Administrator\Desktop`. We can use the command `get-content root.txt` to read the file and get the flag to input it into hack the box.
+    - You will find our root.txt in `c:\Users\Administrator\Desktop`. We can use the command `get-content root.txt` to       read the file and get the flag to input it into hack the box.
+    - our flag: `6e9a9fdc6f64e410a68b847bb4b404fa`
+  - Now I also noticed another user `sandra` while exploiring the mahcine. I looked through her user profile and found     nothing of interest there. Maybe we can find a way to get more information.
+    - To do this we are going to use the mimikatz.exe that is preinstalled on our kali machines. 
+    - to find this file we can runt he command `sudo find | grep mimikatz.exe` from our root directory.
+    - ![image](https://user-images.githubusercontent.com/29686845/134748160-5f6d7b15-fbba-4f1a-ac7d-efaeeaba3010.png)
+    - We see that we kind find the file we are looking for in `/usr/shar/windows-resources/mimikatz/` and there are to       different versions based on the bit version of windows we are working with. In this case I am going to use the         x64 or 64 bit version. `/usr/share/windows-resources/mimkatz/x64/mimikatz.exe`
+    - I copied the mimkatz.exe to my shield directory. 
+    - Now lets upload it back to the server with msf console like we did earlier. 
+    - 
+
