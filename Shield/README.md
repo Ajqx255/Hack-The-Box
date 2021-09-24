@@ -66,4 +66,13 @@ Step 2: msfconsole
 
 Step 3: Netcat
 
-  - 
+  - Kali Linux has builting resources and scripts and we are going to be calling on nc.exe to upgrade our meterpreter       shell.
+    - in `/usr/share/windows-resources/binaries/` you will find the nc.exe. 
+    - We can copy that wiht `cp` command to any directory you would like and we can call on it withing our meterpreter       as long as we provide the absolute path.
+    - Within our meterpreter session lets use the local change directory command (lcd):
+    - `lcd /home/splash/HTB/Starting_Point/Shield` this is my direct path to the nc.exe. (you will use yours)
+    - still within our meterprete session we will change the directory to"
+    -  `\inetpub\wwwroot\wordpress\wp-content\uploads`
+    -  Now lets upload our nc.exe with `upload nc.exe`
+       ![image](https://user-images.githubusercontent.com/29686845/134699318-166baca3-2660-4a5d-b9df-98403840bff9.png)
+    -  
